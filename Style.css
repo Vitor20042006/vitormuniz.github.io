@@ -1,0 +1,241 @@
+:root {
+  --primary: #5a3a2b;
+  --secondary: #7a4b35;
+  --accent: #9a5d3f;
+
+  --dark: #1f1f1f;
+  --text: #2e2e2e;
+
+  --bg: #f4f2f0;
+  --white: #ffffff;
+
+  --border-light: #e5e5e5;
+}
+
+/* RESET LEVE */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 20px;
+  line-height: 1.65;
+}
+
+/* CONTAINER */
+
+.resume-container {
+  max-width: 820px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 42px;
+  border-top: 4px solid var(--primary);
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* HEADER */
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.header-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  flex: 1;
+}
+
+/* FOTO */
+
+.photo-wrap {
+  width: 170px;
+  height: 210px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  background: var(--white);
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXTOS DO HEADER */
+
+h1 {
+  margin: 0;
+  color: var(--dark);
+  font-size: 1.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.professional-title {
+  color: var(--secondary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 6px 0 10px 0;
+}
+
+.contact-info p {
+  margin: 4px 0;
+  font-size: 0.85rem;
+}
+
+.contact-info a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.contact-info a:hover {
+  color: var(--accent);
+}
+
+/* QR */
+
+.qr-code {
+  text-align: center;
+  min-width: 150px;
+}
+
+.qr-code img {
+  width: 140px;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+}
+
+.qr-caption {
+  font-size: 0.72rem;
+  margin-top: 6px;
+  color: #777;
+}
+
+/* SEÇÕES */
+
+section {
+  margin-top: 30px;
+}
+
+h2 {
+  margin: 0 0 12px 0;
+  color: var(--primary);
+  border-bottom: 1px solid var(--secondary);
+  padding-bottom: 4px;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* EXPERIÊNCIA */
+
+.experience-item {
+  margin-bottom: 18px;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.institution {
+  display: block;
+  color: var(--secondary);
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+/* SKILLS */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.skill-card {
+  background: #fafafa;
+  padding: 16px;
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+}
+
+/* LISTAS */
+
+ul {
+  padding-left: 18px;
+  margin: 8px 0 0 0;
+}
+
+li {
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+  .resume-container {
+    padding: 28px;
+  }
+
+  .top-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-left {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .qr-code {
+    margin-top: 20px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 3px;
+  }
+}
+
+/* IMPRESSÃO */
+
+@media print {
+
+  body {
+    background: white;
+    padding: 0;
+  }
+
+  .resume-container {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 30px;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--text);
+  }
+}
